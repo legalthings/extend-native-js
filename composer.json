@@ -1,0 +1,7 @@
+{
+    "name": "legalthings/extend-native-js",
+    "description": "Additional methods for native JavaScript objects",
+    "type": "library",
+    "license": "MIT",
+    "require": {}
+}
