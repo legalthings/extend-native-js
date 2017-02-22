@@ -1,0 +1,19 @@
+{
+  "name": "extend-native-js",
+  "version": "0.1.0",
+  "description": "Additional methods for native JavaScript objects",
+  "main": "extend-native.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/legalthings/extend-native-js.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/legalthings/extend-native-js/issues"
+  },
+  "homepage": "https://github.com/legalthings/extend-native-js#readme"
+}
