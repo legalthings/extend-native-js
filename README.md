@@ -1,8 +1,8 @@
-# Extend native JavaScript objects
+# Beware!
 
-Add methods to native JavaScript object prototypes.
+**Modifying the native JavaScript objects leads to unexpected behaviour.**
 
-_Beware: Modifying the native JavaScript objects might lead to unexpected behaviour._
+_We use this within a sandboxed environment. Don't use this for your website._
 
 ## String methods
 
