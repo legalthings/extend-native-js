@@ -22,7 +22,8 @@
         toDate: method(function() {
             if (this == "") return null;
             
-            var date = moment(this + '', "L");
+            var date = moment(this + '');
+            if (!date.isValid()) date = moment(this + '', 'L');
             date.defaultFormat = "L";
             return date;
         }),
@@ -30,7 +31,8 @@
         toDateTime: method(function() {
             if (this == "") return null;
         
-            var date = moment(this + '', "L LT");
+            var date = moment(this + '');
+            if (!date.isValid()) date = moment(this + '', 'L LT');
             date.defaultFormat = "L LT";
             return date.toString();
         }),
@@ -38,7 +40,8 @@
         toTime: method(function() {
             if (this == "") return null;
         
-            var date = moment(this + '', "LT");
+            var date = moment(this + '');
+            if (!date.isValid()) date = moment(this + '', 'LT');
             date.defaultFormat = "LT";
             return date.toString();
         }),
@@ -46,12 +49,12 @@
         dateFormat: method(function(formatAs) {
             if (this == "") return null;
 
-            var format = 'L';
-            var date = moment(this + '', format);
+            var date = moment(this + '');
+            if (!date.isValid()) date = moment(this + '', 'L');
             var locale = getDocumentLocale('momentjs');
             if (locale) date.locale(locale);
             
-            return formatAs ? date.format(formatAs) : date.format(format);
+            return formatAs ? date.format(formatAs) : date.format('L');
         }),
 
         addPeriod: method(function(duration, unit) {
